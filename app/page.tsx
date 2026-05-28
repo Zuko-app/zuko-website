@@ -1,65 +1,200 @@
-import Image from "next/image";
+import Image from 'next/image'
+import EmailSignup from './components/EmailSignup'
+import PartnerForm from './components/PartnerForm'
+import PhotoGrid from './components/PhotoGrid'
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <div className="min-h-screen font-sans" style={{ backgroundColor: '#FAFAF7', color: '#292929' }}>
+
+      {/* Nav */}
+      <nav className="flex items-center justify-between px-6 py-6 max-w-6xl mx-auto">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
+          src="/logo.png"
+          alt="Zuko"
+          width={140}
+          height={50}
           priority
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+        <span
+          className="text-[13px] rounded-full px-4 py-1.5 font-medium"
+          style={{ backgroundColor: '#5E714B', color: '#FAFAF7' }}
+        >
+          Coming soon to London
+        </span>
+      </nav>
+
+      {/* Hero */}
+      <section className="pt-20 pb-16">
+        <div className="max-w-6xl mx-auto px-6 mb-12">
+          <h1
+            className="text-[56px] sm:text-[72px] font-bold leading-[1.0] tracking-tight"
+            style={{ color: '#292929' }}
+          >
+            Dog friendly,{' '}
+            <span style={{ color: '#5E714B' }}><em>for real.</em></span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+        </div>
+
+        {/* Scrolling photo grid */}
+        <div className="mb-0">
+          <PhotoGrid />
+        </div>
+      </section>
+
+      {/* Waitlist */}
+      <section className="py-28 px-6" style={{ backgroundColor: '#F0EDE6' }}>
+        <div className="max-w-xl mx-auto text-center">
+          <h2
+            className="text-[36px] sm:text-[48px] font-bold leading-tight tracking-tight mb-3"
+            style={{ color: '#292929' }}
+          >
+            No more guessing. No more calling ahead.
+          </h2>
+          <p className="text-[16px] mb-8" style={{ color: '#6B6B5A' }}>
+            Join the waitlist and we&apos;ll let you know when we&apos;re live.
+          </p>
+          <EmailSignup />
+          <p className="mt-4 text-[13px]" style={{ color: '#9A9A85' }}>
+            No spam, ever.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Divider */}
+      <div style={{ borderTop: '1px solid #E5E3DC' }} />
+
+      {/* Features */}
+      <section className="max-w-6xl mx-auto px-6 py-24">
+        <p className="text-[12px] uppercase tracking-widest mb-16" style={{ color: '#9A9A85' }}>
+          What you&apos;ll find on Zuko
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
+          <div className="flex flex-col gap-4">
+            <div
+              className="w-11 h-11 rounded-xl flex items-center justify-center text-xl"
+              style={{ backgroundColor: '#EAF0E4' }}
+            >
+              ☕
+            </div>
+            <h3 className="text-[16px] font-semibold" style={{ color: '#292929' }}>
+              Cafes &amp; Restaurants
+            </h3>
+            <p className="text-[14px] leading-relaxed" style={{ color: '#6B6B5A' }}>
+              Discover dog-friendly tables inside and out, with honest reviews
+              from owners like you.
+            </p>
+          </div>
+          <div className="flex flex-col gap-4">
+            <div
+              className="w-11 h-11 rounded-xl flex items-center justify-center text-xl"
+              style={{ backgroundColor: '#EAF0E4' }}
+            >
+              🐾
+            </div>
+            <h3 className="text-[16px] font-semibold" style={{ color: '#292929' }}>
+              Dog-Friendly Events
+            </h3>
+            <p className="text-[14px] leading-relaxed" style={{ color: '#6B6B5A' }}>
+              Discover local events where dogs are welcome — from markets and
+              pop-ups to walks and meetups.
+            </p>
+          </div>
+          <div className="flex flex-col gap-4">
+            <div
+              className="w-11 h-11 rounded-xl flex items-center justify-center text-xl"
+              style={{ backgroundColor: '#EAF0E4' }}
+            >
+              🏨
+            </div>
+            <h3 className="text-[16px] font-semibold" style={{ color: '#292929' }}>
+              Hotels &amp; Stays
+            </h3>
+            <p className="text-[14px] leading-relaxed" style={{ color: '#6B6B5A' }}>
+              Plan a weekend away without leaving your dog behind. Filter stays
+              that truly welcome dogs.
+            </p>
+          </div>
         </div>
-      </main>
+        <p className="mt-12 text-[12px] uppercase tracking-widest text-center font-bold italic" style={{ color: '#9A9A85' }}>
+          And so much more...
+        </p>
+      </section>
+
+      {/* About — full-width green section */}
+      <section style={{ backgroundColor: '#5E714B' }}>
+        <div className="max-w-6xl mx-auto px-6 py-24">
+          <p className="text-[12px] uppercase tracking-widest mb-10" style={{ color: '#A8BF96' }}>
+            About us
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-16 items-start">
+            <div>
+              <h2
+                className="text-[36px] font-bold leading-tight tracking-tight mb-8"
+                style={{ color: '#FAFAF7' }}
+              >
+                Built because we needed it ourselves.
+              </h2>
+              <p className="text-[15px] leading-relaxed mb-5" style={{ color: '#C8D9BB' }}>
+                We&apos;re two sisters who built this because we couldn&apos;t find what we needed
+                ourselves. With a 40kg Labrador in London, we got used to the routine: outdated
+                reviews, vague pet policies, and a lot of calling ahead just to confirm we
+                wouldn&apos;t be turned away at the door. The information was scattered, stale,
+                or simply wrong.
+              </p>
+              <p className="text-[15px] leading-relaxed" style={{ color: '#C8D9BB' }}>
+                So we&apos;re building something better — a platform with verified, up-to-date
+                pet policies direct from venues, so dog owners can stop guessing and start going.
+              </p>
+            </div>
+            {/* Founders photo */}
+            <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden">
+              <Image
+                src="/founders.jpg"
+                alt="Zuko founders with their Labrador"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partner contact */}
+      <section className="py-28 px-6" style={{ backgroundColor: '#FAFAF7' }}>
+        <div className="max-w-2xl mx-auto">
+          <p className="text-[12px] uppercase tracking-widest mb-6" style={{ color: '#9A9A85' }}>
+            For venues &amp; partners
+          </p>
+          <h2
+            className="text-[36px] sm:text-[48px] font-bold leading-tight tracking-tight mb-4"
+            style={{ color: '#292929' }}
+          >
+            Want to list your venue on Zuko?
+          </h2>
+          <p className="text-[16px] mb-10" style={{ color: '#6B6B5A' }}>
+            Get in touch and we&apos;ll reach out before we launch.
+          </p>
+          <PartnerForm />
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div style={{ borderTop: '1px solid #E5E3DC' }} />
+
+      {/* Footer */}
+      <footer className="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <Image
+          src="/logo.png"
+          alt="Zuko"
+          width={80}
+          height={29}
+        />
+        <p className="text-[13px]" style={{ color: '#9A9A85' }}>
+          © {new Date().getFullYear()} Zuko. All rights reserved.
+        </p>
+      </footer>
+
     </div>
-  );
+  )
 }
