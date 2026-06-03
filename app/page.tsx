@@ -42,6 +42,9 @@ export default function Home() {
 
       {/* Stats */}
       <section className="max-w-6xl mx-auto px-6 py-24">
+        <h2 className="text-[28px] sm:text-[36px] font-bold leading-tight tracking-tight mb-16 text-center" style={{ color: '#292929' }}>
+          &ldquo;Dog-friendly&rdquo; rarely means what it should.
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
           {[
             {
@@ -76,13 +79,10 @@ export default function Home() {
       </section>
 
       {/* Features */}
-      <section className="max-w-6xl mx-auto px-6 pt-10 pb-24">
-        <div className="flex items-center justify-center mb-10" style={{ gap: '0.35em' }}>
-          <p className="text-[44px] font-bold leading-none tracking-tight" style={{ color: '#292929' }}>
-            What you&apos;ll find on
-          </p>
-          <Image src="/logo.png" alt="Zuko" width={130} height={46} style={{ marginBottom: '2px' }} />
-        </div>
+      <section className="max-w-6xl mx-auto px-6 pt-4 pb-24">
+        <h2 className="text-[28px] sm:text-[36px] font-bold leading-none tracking-tight text-center mb-6" style={{ color: '#292929' }}>
+          What you&apos;ll find on <span style={{ color: '#5E714B' }}>Zuko</span>
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {[
             { src: '/G-NEW.png', category: 'Cafes & Restaurants', description: 'Dog-friendly tables inside and out' },
