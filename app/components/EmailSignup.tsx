@@ -33,7 +33,7 @@ export default function EmailSignup() {
         type="submit"
         disabled={pending}
         className="h-11 rounded-full px-6 text-[14px] font-medium text-white transition-opacity hover:opacity-80 disabled:opacity-50 whitespace-nowrap"
-        style={{ backgroundColor: '#5E714B' }}
+        style={{ backgroundColor: '#D4A843' }}
       >
         {pending ? 'Joining...' : 'Join the waitlist'}
       </button>

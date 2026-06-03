@@ -63,7 +63,7 @@ export default function PartnerForm() {
         type="submit"
         disabled={pending}
         className="h-11 rounded-full px-6 text-[14px] font-medium text-white transition-opacity hover:opacity-80 disabled:opacity-50 self-start"
-        style={{ backgroundColor: '#5E714B' }}
+        style={{ backgroundColor: '#D4A843' }}
       >
         {pending ? 'Sending...' : 'Get in touch'}
       </button>
