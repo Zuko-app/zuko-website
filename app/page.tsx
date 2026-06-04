@@ -160,7 +160,7 @@ export default function Home() {
       <section className="relative w-full" style={{ minHeight: '760px' }}>
         {/* Background photo */}
         <Image
-          src="/G-ABOUT.jpg"
+          src="/DSC09863 copy.jpg"
           alt="Partner with Zuko"
           fill
           className="object-cover object-center"
