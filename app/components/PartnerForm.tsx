@@ -59,6 +59,19 @@ export default function PartnerForm() {
         className="rounded-2xl border px-5 py-3 text-[14px] outline-none transition-colors resize-none"
         style={{ borderColor: '#D5D3CC', backgroundColor: 'white', color: '#292929' }}
       />
+      <div className="flex items-start gap-3">
+        <input
+          type="checkbox"
+          name="consent"
+          id="partner-consent"
+          required
+          className="mt-1 accent-[#5E714B]"
+        />
+        <label htmlFor="partner-consent" className="text-[12px] leading-relaxed" style={{ color: '#9A9A85' }}>
+          I agree to be contacted by Zuko and have read the{' '}
+          <a href="/privacy" className="underline hover:opacity-70" style={{ color: '#6B6B5A' }}>Privacy Policy</a>.
+        </label>
+      </div>
       <button
         type="submit"
         disabled={pending}
