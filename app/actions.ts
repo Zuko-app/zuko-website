@@ -6,7 +6,7 @@ import { Resend } from 'resend'
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 // Update this when you're ready to change your notification email
-const NOTIFY_EMAIL = 'admin@amavih.com'
+const NOTIFY_EMAIL = 'team@thezukoapp.com'
 
 export type FormState = { submitted: true } | { error: string } | null
 
