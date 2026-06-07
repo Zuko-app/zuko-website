@@ -22,7 +22,7 @@ export async function submitWaitlist(_prev: FormState, formData: FormData): Prom
   }
 
   await resend.emails.send({
-    from: 'Zuko <onboarding@resend.dev>',
+    from: 'Zuko <team@thezukoapp.com>',
     to: NOTIFY_EMAIL,
     subject: 'New Zuko waitlist signup',
     html: `<p><strong>${email}</strong> just joined the Zuko waitlist.</p>`,
@@ -42,7 +42,7 @@ export async function submitPartner(_prev: FormState, formData: FormData): Promi
   if (error) return { error: error.message }
 
   await resend.emails.send({
-    from: 'Zuko <onboarding@resend.dev>',
+    from: 'Zuko <team@thezukoapp.com>',
     to: NOTIFY_EMAIL,
     subject: `New partner inquiry from ${business}`,
     html: `
