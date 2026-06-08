@@ -1,10 +1,25 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import EmailSignup from './EmailSignup'
 
 export default function WaitlistModal() {
   const [open, setOpen] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
+
+  useEffect(() => {
+    if (sessionStorage.getItem('waitlist-seen')) return
+    const timer = setTimeout(() => {
+      setOpen(true)
+      sessionStorage.setItem('waitlist-seen', 'true')
+    }, 1500)
+    return () => clearTimeout(timer)
+  }, [])
+
+  const handleClose = () => {
+    setOpen(false)
+    sessionStorage.setItem('waitlist-seen', 'true')
+  }
 
   return (
     <>
@@ -25,7 +40,7 @@ export default function WaitlistModal() {
         <div
           className="fixed inset-0 z-50 flex items-center justify-center px-6"
           style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}
-          onClick={() => setOpen(false)}
+          onClick={handleClose}
         >
           <div
             className="relative w-full max-w-md rounded-2xl p-10"
@@ -34,7 +49,7 @@ export default function WaitlistModal() {
           >
             {/* Close button */}
             <button
-              onClick={() => setOpen(false)}
+              onClick={handleClose}
               className="absolute top-5 right-5 text-[20px] leading-none transition-opacity hover:opacity-50"
               style={{ color: '#292929' }}
               aria-label="Close"
@@ -42,16 +57,20 @@ export default function WaitlistModal() {
               ×
             </button>
 
-            <h2
-              className="text-[28px] font-bold leading-tight tracking-tight mb-3"
-              style={{ color: '#292929' }}
-            >
-              No more guessing. No more calling ahead.
-            </h2>
-            <p className="text-[15px] mb-8" style={{ color: '#6B6B5A' }}>
-              Join the waitlist and we&apos;ll let you know when Zuko launches in London.
-            </p>
-            <EmailSignup />
+            {!submitted && (
+              <>
+                <h2
+                  className="text-[28px] font-bold leading-tight tracking-tight mb-3"
+                  style={{ color: '#292929' }}
+                >
+                  No more guessing. No more calling ahead.
+                </h2>
+                <p className="text-[15px] mb-8" style={{ color: '#6B6B5A' }}>
+                  Join the waitlist and we&apos;ll let you know when Zuko launches in London.
+                </p>
+              </>
+            )}
+            <EmailSignup onSuccess={() => setSubmitted(true)} />
             <p className="mt-4 text-[12px]" style={{ color: '#9A9A85' }}>
               No spam, ever.
             </p>

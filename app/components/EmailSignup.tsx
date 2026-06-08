@@ -1,12 +1,17 @@
 'use client'
 
-import { useActionState } from 'react'
+import { useActionState, useEffect } from 'react'
 import { submitWaitlist, type FormState } from '@/app/actions'
 
-export default function EmailSignup() {
+export default function EmailSignup({ onSuccess }: { onSuccess?: () => void }) {
   const [state, action, pending] = useActionState<FormState, FormData>(submitWaitlist, null)
+  const submitted = !!(state && 'submitted' in state)
 
-  if (state && 'submitted' in state) {
+  useEffect(() => {
+    if (submitted) onSuccess?.()
+  }, [submitted, onSuccess])
+
+  if (submitted) {
     return (
       <div className="flex flex-col gap-2">
         <p className="text-[15px] font-medium" style={{ color: '#292929' }}>
