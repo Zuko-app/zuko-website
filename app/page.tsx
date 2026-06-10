@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import PartnerForm from './components/PartnerForm'
 import PhotoGrid from './components/PhotoGrid'
 import WaitlistModal from './components/WaitlistModal'
@@ -212,9 +213,17 @@ export default function Home() {
             </svg>
           </a>
         </div>
-        <p className="text-[13px]" style={{ color: '#9A9A85' }}>
-          © {new Date().getFullYear()} Zuko. All rights reserved.
-        </p>
+        <div className="flex items-center gap-4">
+          <Link href="/privacy" className="text-[13px] hover:opacity-70 transition-opacity" style={{ color: '#9A9A85' }}>
+            Privacy Policy
+          </Link>
+          <Link href="/terms" className="text-[13px] hover:opacity-70 transition-opacity" style={{ color: '#9A9A85' }}>
+            Terms &amp; Conditions
+          </Link>
+          <p className="text-[13px]" style={{ color: '#9A9A85' }}>
+            © {new Date().getFullYear()} Zuko. All rights reserved.
+          </p>
+        </div>
       </footer>
 
     </div>
