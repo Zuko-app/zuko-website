@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Zuko — Find dog-friendly spots near you",
+  title: "Zuko — Dog friendly places, without the guesswork",
   description:
     "Zuko connects dog owners to the best local cafes, parks, hotels, and more. Launching in London soon.",
 };
