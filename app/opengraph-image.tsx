@@ -30,7 +30,7 @@ export default function OGImage() {
         {/* Tagline */}
         <div
           style={{
-            fontSize: '32px',
+            fontSize: '52px',
             color: '#6B6B5A',
             letterSpacing: '1px',
           }}
@@ -43,7 +43,7 @@ export default function OGImage() {
           style={{
             position: 'absolute',
             bottom: '40px',
-            fontSize: '18px',
+            fontSize: '26px',
             color: '#9A9A85',
             letterSpacing: '2px',
           }}
