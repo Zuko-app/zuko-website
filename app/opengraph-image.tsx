@@ -25,12 +25,12 @@ export default function OGImage() {
         }}
       >
         {/* Logo */}
-        <img src={logoSrc} width={320} height={114} style={{ objectFit: 'contain' }} />
+        <img src={logoSrc} width={560} height={200} style={{ objectFit: 'contain' }} />
 
         {/* Tagline */}
         <div
           style={{
-            fontSize: '52px',
+            fontSize: '72px',
             color: '#6B6B5A',
             letterSpacing: '1px',
           }}
@@ -42,10 +42,10 @@ export default function OGImage() {
         <div
           style={{
             position: 'absolute',
-            bottom: '40px',
-            fontSize: '26px',
+            bottom: '48px',
+            fontSize: '32px',
             color: '#9A9A85',
-            letterSpacing: '2px',
+            letterSpacing: '3px',
           }}
         >
           thezukoapp.com
