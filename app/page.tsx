@@ -158,10 +158,13 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="max-w-6xl mx-auto px-6 py-24">
-        <h2 className="text-[28px] sm:text-[36px] font-bold leading-tight tracking-tight text-center mb-16" style={{ color: '#292929' }}>
+      <section className="max-w-6xl mx-auto px-6 pt-12 pb-24">
+        <h2 className="text-[28px] sm:text-[36px] font-bold leading-tight tracking-tight text-center mb-4" style={{ color: '#292929' }}>
           Don&apos;t just take our word for it.
         </h2>
+        <p className="text-[16px] leading-relaxed text-center mb-16 max-w-xl mx-auto" style={{ color: '#6B6B5A' }}>
+          Real stories from dog owners who&apos;ve experienced the frustration of finding genuinely dog-friendly places.
+        </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           {[
             {
