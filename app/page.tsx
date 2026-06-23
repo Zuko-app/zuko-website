@@ -157,6 +157,64 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <section className="max-w-6xl mx-auto px-6 py-24">
+        <h2 className="text-[28px] sm:text-[36px] font-bold leading-tight tracking-tight text-center mb-16" style={{ color: '#292929' }}>
+          Don&apos;t just take our word for it.
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          {[
+            {
+              quote: "We've turned up to places labelled 'dog-friendly' only to be told dogs weren't allowed inside. It's frustrating and embarrassing.",
+              name: 'Gabrielle S',
+              descriptor: 'XL Bully Owner, London',
+              bg: '#EAF0E4',
+              initials: 'GS',
+              image: '/TEST_3.jpg',
+            },
+            {
+              quote: "We spend so much time scrolling through websites, reviews and social media just to figure out if somewhere is actually dog-friendly. Having one trusted source would be a huge time-saver.",
+              name: 'Priya K',
+              descriptor: 'Cavapoo Owner, London',
+              bg: '#E8E4F0',
+              initials: 'PK',
+              image: '/TEST_2.png',
+            },
+            {
+              quote: "I take my dog everywhere with me, but finding new places I can trust is always hit and miss!",
+              name: 'James R',
+              descriptor: 'Vizla owner, London',
+              bg: '#F0EBE0',
+              initials: 'JR',
+              image: '/TEST_1.1.png',
+            },
+          ].map((t) => (
+            <div key={t.name} className="flex flex-col items-center text-center gap-5 p-8 rounded-2xl" style={{ backgroundColor: '#F5F4EF' }}>
+              {/* Circular avatar */}
+              {t.image ? (
+                <div className="w-20 h-20 rounded-full overflow-hidden flex-shrink-0 relative">
+                  <Image src={t.image} alt={t.name} fill className="object-cover" />
+                </div>
+              ) : (
+                <div
+                  className="w-20 h-20 rounded-full flex items-center justify-center text-[18px] font-bold flex-shrink-0"
+                  style={{ backgroundColor: t.bg, color: '#5E714B' }}
+                >
+                  {t.initials}
+                </div>
+              )}
+              <p className="text-[15px] leading-relaxed italic" style={{ color: '#6B6B5A' }}>
+                &ldquo;{t.quote}&rdquo;
+              </p>
+              <div>
+                <p className="text-[14px] font-semibold" style={{ color: '#292929' }}>{t.name}</p>
+                <p className="text-[12px] mt-1" style={{ color: '#9A9A85' }}>{t.descriptor}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Partner contact */}
       <section className="relative w-full" style={{ minHeight: '760px' }}>
         {/* Background photo */}
