@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 const images = [
-  '/grid-1.png',
+  '/G111.png',
   '/grid-4.png',
   '/grid-3.png',
   '/grid.png',

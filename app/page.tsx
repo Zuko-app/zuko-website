@@ -42,7 +42,7 @@ export default function Home() {
       </section>
 
       {/* Stats */}
-      <section className="max-w-6xl mx-auto px-6 py-24">
+      <section className="max-w-6xl mx-auto px-6 pt-24 pb-12">
         <h2 className="text-[28px] sm:text-[36px] font-bold leading-tight tracking-tight mb-16 text-center" style={{ color: '#292929' }}>
           &ldquo;Dog-friendly&rdquo; rarely means what it should.
         </h2>
