@@ -33,7 +33,7 @@ export default function Home() {
             <span style={{ color: '#5E714B' }}><em>for real.</em></span>
           </h1>
           <p className="text-[18px] leading-relaxed mx-auto max-w-xl" style={{ color: '#6B6B5A' }}>
-            Find trusted dog-friendly places without the guesswork.
+            The app that helps dog owners discover trusted cafés, restaurants, hotels, pubs, events and more.
           </p>
         </div>
 
@@ -46,13 +46,8 @@ export default function Home() {
         <h2 className="text-[28px] sm:text-[36px] font-bold leading-tight tracking-tight mb-16 text-center" style={{ color: '#292929' }}>
           &ldquo;Dog-friendly&rdquo; rarely means what it should.
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           {[
-            {
-              stat: '11.1M',
-              description: 'dogs in the UK — yet finding a dog-friendly spot still means Googling and hoping for the best.',
-              source: 'PDSA, 2025',
-            },
             {
               stat: '1 in 4',
               description: 'dog owners have left a venue they\'d already researched because it turned out not to be truly welcoming.',
@@ -80,10 +75,60 @@ export default function Home() {
       </section>
 
       {/* Features */}
-      <section className="max-w-6xl mx-auto px-6 pt-4 pb-24">
-        <h2 className="text-[28px] sm:text-[36px] font-bold leading-none tracking-tight text-center mb-6" style={{ color: '#292929' }}>
-          What you&apos;ll find on <span style={{ color: '#5E714B' }}>Zuko</span>
+      {/* How it works */}
+      <section className="max-w-6xl mx-auto px-6 pt-12 pb-24">
+        <h2 className="text-[28px] sm:text-[36px] font-bold leading-tight tracking-tight text-center mb-16" style={{ color: '#292929' }}>
+          Your next dog-friendly adventure starts here.
         </h2>
+        <div className="relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
+{[
+            {
+              number: '01',
+              title: 'Discover',
+              description: 'Find cafés, restaurants, hotels, pubs and events near you.',
+            },
+            {
+              number: '02',
+              title: 'Check',
+              description: 'See verified pet policies, photos and community reviews.',
+            },
+            {
+              number: '03',
+              title: 'Explore',
+              description: 'Head out with confidence and discover more with your dog.',
+            },
+          ].map((step, i) => (
+            <div key={i} className="flex flex-col items-start gap-3 flex-1">
+              <div style={{ color: '#D4A843' }}>
+                {i === 0 && (
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                    <circle cx="12" cy="9" r="2.5"/>
+                  </svg>
+                )}
+                {i === 1 && (
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                )}
+                {i === 2 && (
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                    <ellipse cx="6" cy="6.5" rx="2" ry="2.5"/>
+                    <ellipse cx="10.5" cy="4" rx="1.8" ry="2.2"/>
+                    <ellipse cx="15" cy="4" rx="1.8" ry="2.2"/>
+                    <ellipse cx="19" cy="6.5" rx="2" ry="2.5"/>
+                    <path d="M12 10c-3 0-6 2-6 5.5 0 2 1.5 3.5 3 3.5.8 0 1.5-.3 2-.5h2c.5.2 1.2.5 2 .5 1.5 0 3-1.5 3-3.5 0-3.5-3-5.5-6-5.5z"/>
+                  </svg>
+                )}
+              </div>
+              <p className="text-[17px] font-semibold tracking-wide uppercase" style={{ color: '#292929' }}>{step.title}</p>
+              <p className="text-[14px] leading-relaxed" style={{ color: '#6B6B5A' }}>{step.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="max-w-6xl mx-auto px-6 pt-8 pb-24">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {[
             { src: '/G-NEW.png', category: 'Cafes & Restaurants', description: 'Dog-friendly tables inside and out' },
@@ -93,7 +138,7 @@ export default function Home() {
             <div
               key={item.category}
               className="relative rounded-2xl overflow-hidden"
-              style={{ aspectRatio: '3 / 4' }}
+              style={{ aspectRatio: '3 / 4.5' }}
             >
               <Image
                 src={item.src}
@@ -141,7 +186,7 @@ export default function Home() {
               We&apos;re two sisters who built Zuko after one too many disappointing &ldquo;dog-friendly&rdquo; experiences.
             </p>
             <p className="text-[16px] leading-relaxed" style={{ color: '#6B6B5A' }}>
-              As owners of a 40kg Labrador, we know how frustrating it is trying to work out where your dog is genuinely welcome. Information is often outdated, inconsistent, or impossible to find. So we&apos;re building a better way to discover trusted dog-friendly places — without the guesswork.
+              As owners of a 40kg Labrador, we know how frustrating it is trying to work out where your dog is genuinely welcome. Information is often outdated, inconsistent, or impossible to find. So we&apos;re building a better way to discover trusted dog-friendly places, without the guesswork.
             </p>
           </div>
           {/* Photo */}

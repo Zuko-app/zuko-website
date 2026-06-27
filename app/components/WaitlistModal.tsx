@@ -25,11 +25,10 @@ export default function WaitlistModal() {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="text-[11px] rounded-full px-5 py-2.5 font-bold uppercase tracking-widest transition-all hover:scale-105 animate-badge-flash"
+        className="text-[11px] rounded-full px-5 py-1.5 font-bold uppercase tracking-widest transition-all hover:scale-105"
         style={{
-          backgroundColor: '#FAFAF7',
-          color: '#292929',
-          border: '2px dashed #D4A843',
+          backgroundColor: '#D4A843',
+          color: '#FAFAF7',
           letterSpacing: '0.1em',
         }}
       >
