@@ -18,12 +18,8 @@ export default function WaitlistModal() {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="text-[11px] rounded-full px-5 py-1.5 font-bold uppercase tracking-widest transition-all hover:scale-105"
-        style={{
-          backgroundColor: '#D4A843',
-          color: '#FAFAF7',
-          letterSpacing: '0.1em',
-        }}
+        className="text-[11px] rounded-full px-5 py-2 font-bold uppercase tracking-widest transition-all hover:opacity-80 self-center"
+        style={{ backgroundColor: '#D4A843', color: '#FAFAF7', letterSpacing: '0.1em' }}
       >
         Join the waitlist
       </button>

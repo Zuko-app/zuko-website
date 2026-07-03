@@ -14,8 +14,8 @@ export default function Home() {
         <Image
           src="/ZUKO-LOGO.png"
           alt="Zuko"
-          width={140}
-          height={50}
+          width={160}
+          height={43}
           priority
         />
         <WaitlistModal />
