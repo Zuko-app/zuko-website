@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import PartnerForm from './components/PartnerForm'
+import PartnerModal from './components/PartnerModal'
 import PhotoGrid from './components/PhotoGrid'
 import WaitlistModal from './components/WaitlistModal'
 
@@ -12,7 +12,7 @@ export default function Home() {
       <div className="sticky top-0 z-40 w-full" style={{ backgroundColor: '#FAFAF7' }}>
       <nav className="flex items-center justify-between px-6 py-3 max-w-6xl mx-auto">
         <Image
-          src="/logo.png"
+          src="/ZUKO-LOGO.png"
           alt="Zuko"
           width={140}
           height={50}
@@ -263,45 +263,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Partner contact */}
-      <section className="relative w-full" style={{ minHeight: '760px' }}>
-        {/* Background photo */}
-        <Image
-          src="/DSC09863 copy.jpg"
-          alt="Partner with Zuko"
-          fill
-          className="object-cover object-center"
-        />
-        {/* Dark overlay */}
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.65) 100%)' }} />
-
-        {/* Floating card */}
-        <div className="relative z-10 flex flex-col items-center justify-center px-6 py-24" style={{ minHeight: '760px' }}>
-          <div className="w-full max-w-lg rounded-2xl p-10" style={{ backgroundColor: '#FAFAF7' }}>
-            <p className="text-[11px] uppercase tracking-widest mb-3" style={{ color: '#9A9A85' }}>
-              For venues &amp; partners
-            </p>
-            <h2
-              className="text-[28px] font-bold leading-tight tracking-tight mb-2"
-              style={{ color: '#292929' }}
-            >
-              Want to list your event or venue on Zuko?
-            </h2>
-            <p className="text-[14px] mb-8" style={{ color: '#6B6B5A' }}>
-              Get in touch and we&apos;ll reach out before we launch.
-            </p>
-            <PartnerForm />
-          </div>
-        </div>
-      </section>
-
       {/* Divider */}
       <div style={{ borderTop: '1px solid #E5E3DC' }} />
 
       {/* Footer */}
       <footer className="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
         <Image
-          src="/logo.png"
+          src="/ZUKO-LOGO.png"
           alt="Zuko"
           width={80}
           height={29}
@@ -320,6 +288,7 @@ export default function Home() {
           </a>
         </div>
         <div className="flex items-center gap-4">
+          <PartnerModal />
           <Link href="/privacy" className="text-[13px] hover:opacity-70 transition-opacity" style={{ color: '#9A9A85' }}>
             Privacy Policy
           </Link>

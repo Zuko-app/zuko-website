@@ -1,20 +1,13 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import Image from 'next/image'
 import EmailSignup from './EmailSignup'
 
 export default function WaitlistModal() {
   const [open, setOpen] = useState(false)
   const [submitted, setSubmitted] = useState(false)
 
-  useEffect(() => {
-    if (sessionStorage.getItem('waitlist-seen')) return
-    const timer = setTimeout(() => {
-      setOpen(true)
-      sessionStorage.setItem('waitlist-seen', 'true')
-    }, 1500)
-    return () => clearTimeout(timer)
-  }, [])
 
   const handleClose = () => {
     setOpen(false)
@@ -42,37 +35,45 @@ export default function WaitlistModal() {
           onClick={handleClose}
         >
           <div
-            className="relative w-full max-w-md rounded-2xl p-10"
+            className="relative w-full max-w-md rounded-2xl overflow-hidden"
             style={{ backgroundColor: '#FAFAF7' }}
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close button */}
-            <button
-              onClick={handleClose}
-              className="absolute top-5 right-5 text-[20px] leading-none transition-opacity hover:opacity-50"
-              style={{ color: '#292929' }}
-              aria-label="Close"
-            >
-              ×
-            </button>
+            {/* Gold accent bar */}
+            <div className="h-1 w-full" style={{ backgroundColor: '#D4A843' }} />
 
-            {!submitted && (
-              <>
-                <h2
-                  className="text-[28px] font-bold leading-tight tracking-tight mb-3"
-                  style={{ color: '#292929' }}
-                >
-                  No more guessing. No more calling ahead.
-                </h2>
-                <p className="text-[15px] mb-8" style={{ color: '#6B6B5A' }}>
-                  Join the waitlist and we&apos;ll let you know when Zuko launches in London.
-                </p>
-              </>
-            )}
-            <EmailSignup onSuccess={() => setSubmitted(true)} />
-            <p className="mt-4 text-[12px]" style={{ color: '#9A9A85' }}>
-              No spam, ever.
-            </p>
+            <div className="p-10">
+              {/* Close button */}
+              <button
+                onClick={handleClose}
+                className="absolute top-5 right-6 text-[22px] leading-none transition-opacity hover:opacity-40"
+                style={{ color: '#B0ADA6' }}
+                aria-label="Close"
+              >
+                ×
+              </button>
+
+              {/* Logo */}
+              <Image src="/ZUKO-LOGO.png" alt="Zuko" width={90} height={32} className="mb-8" />
+
+              {!submitted && (
+                <>
+                  <h2
+                    className="text-[24px] font-bold leading-tight tracking-tight mb-3"
+                    style={{ color: '#292929' }}
+                  >
+                    No more guessing.<br />No more calling ahead.
+                  </h2>
+                  <p className="text-[14px] mb-8 leading-relaxed" style={{ color: '#6B6B5A' }}>
+                    Join the waitlist and we&apos;ll let you know when Zuko launches in London.
+                  </p>
+                </>
+              )}
+              <EmailSignup onSuccess={() => setSubmitted(true)} />
+              <p className="mt-4 text-[12px]" style={{ color: '#B0ADA6' }}>
+                No spam, ever.
+              </p>
+            </div>
           </div>
         </div>
       )}

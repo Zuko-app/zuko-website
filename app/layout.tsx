@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "Zuko — Dog friendly places, without the guesswork",
   description:
     "Zuko connects dog owners to the best local cafes, parks, hotels, and more. Launching in London soon.",
+  icons: {
+    icon: "/ZUKO-ICON.png",
+  },
 };
 
 export default function RootLayout({

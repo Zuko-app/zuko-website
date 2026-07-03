@@ -13,7 +13,7 @@ export default function PrivacyPolicy() {
       <div className="sticky top-0 z-40 w-full" style={{ backgroundColor: '#FAFAF7' }}>
         <nav className="flex items-center justify-between px-6 py-3 max-w-6xl mx-auto">
           <Link href="/">
-            <Image src="/logo.png" alt="Zuko" width={140} height={50} priority />
+            <Image src="/ZUKO-LOGO.png" alt="Zuko" width={140} height={50} priority />
           </Link>
           <Link
             href="/"
@@ -146,7 +146,7 @@ export default function PrivacyPolicy() {
       {/* Footer */}
       <div style={{ borderTop: '1px solid #E5E3DC' }} />
       <footer className="max-w-6xl mx-auto px-6 py-10 flex items-center justify-between">
-        <Image src="/logo.png" alt="Zuko" width={80} height={29} />
+        <Image src="/ZUKO-LOGO.png" alt="Zuko" width={80} height={29} />
         <p className="text-[13px]" style={{ color: '#9A9A85' }}>
           © {new Date().getFullYear()} Zuko. All rights reserved.
         </p>
