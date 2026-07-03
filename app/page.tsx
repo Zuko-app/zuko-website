@@ -10,7 +10,7 @@ export default function Home() {
 
       {/* Nav */}
       <div className="sticky top-0 z-40 w-full" style={{ backgroundColor: '#FAFAF7' }}>
-      <nav className="flex items-center justify-between px-6 py-3 max-w-6xl mx-auto">
+      <nav className="flex items-center justify-between px-6 py-4 max-w-6xl mx-auto">
         <Image
           src="/ZUKO-LOGO.png"
           alt="Zuko"
