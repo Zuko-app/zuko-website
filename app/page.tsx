@@ -33,7 +33,7 @@ export default function Home() {
             <span style={{ color: '#5E714B' }}><em>for real.</em></span>
           </h1>
           <p className="text-[18px] leading-relaxed mx-auto max-w-xl" style={{ color: '#6B6B5A' }}>
-            The app that helps dog owners discover trusted cafés, restaurants, hotels, pubs, events and more.
+            Discover trusted cafés, restaurants, hotels, pubs, events and more - all in one app.
           </p>
         </div>
 
